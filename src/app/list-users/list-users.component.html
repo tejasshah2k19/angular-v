@@ -1,0 +1,12 @@
+<ul *ngFor="let m of users">
+  <li>{{m.firstName}} | {{m.lastName}} | <a (click)="removeUser(m.userId)">Remove</a> | <span (click)="getDetail(m.userId)" >View </span> | <a routerLink="/userdetail/{{m.userId}}">GetUserData</a>  </li>
+
+</ul>
+
+
+<div *ngIf="user">
+<br>View User Detail <br>
+UserId:{{user.userId}}<br>
+First Name:{{user.firstName}}<br>
+Last Name:{{user.lastName}}<br>
+</div>
