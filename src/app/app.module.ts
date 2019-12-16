@@ -11,7 +11,11 @@ import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { ListUsersComponent } from './list-users/list-users.component';
-import { UserDetailComponent } from './user-detail/user-detail.component'
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { ListBooksComponent } from './components/list-books/list-books.component'
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
+import { ListEmployeeComponent } from './components/list-employee/list-employee.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,12 +26,16 @@ import { UserDetailComponent } from './user-detail/user-detail.component'
     HomeComponent,
     SignupComponent,
     ListUsersComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    ListBooksComponent,
+    AddEmployeeComponent,
+    ListEmployeeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
